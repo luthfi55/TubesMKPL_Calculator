@@ -27,6 +27,10 @@ public class Calculator {
 
         //System.out.println("------------------------ " + s);
         s = s.replaceAll(" ", "");
+        s = s.replaceAll(" ", "");
+        s = s.replaceAll(" ", "");
+        s = s.replaceAll(" ", "");
+        s = s.replaceAll(" ", "");
 
         List<String> parsed = parseExpression(s);
         //System.out.println("parsed " + parsed);
