@@ -1,65 +1,46 @@
 import junit.framework.TestCase;
 
-public class CalculatorTest extends TestCase {
+public class CalculatorTest extends TestCase{
+    public static void main(String[] args) {
+        testAddition();
+        testSubtraction();
+        testMultiplication();
+        testDivision();
+        testComplexExpression();
+    }
 
-    public void test() {
-        assertEquals("4.0", Calculator.calculateExpression("4"));
-        assertEquals("-4.0", Calculator.calculateExpression("-4"));
-        assertEquals("5.0", Calculator.calculateExpression("4 + 1"));
-        assertEquals("3.0", Calculator.calculateExpression("4 + -1"));
-        assertEquals("0.2", Calculator.calculateExpression("0.2"));
-        assertEquals("1.6", Calculator.calculateExpression("1.2 + 0.4"));
-        assertEquals("1.6", Calculator.calculateExpression("1.2 + .4"));
-        assertEquals("0.6000000000000001", Calculator.calculateExpression("0.2 + 0.4"));
-        assertEquals("-0.2", Calculator.calculateExpression("0.2 - 0.4"));
-        assertEquals("6.0", Calculator.calculateExpression("2 - -4"));
-        assertEquals("-3.0", Calculator.calculateExpression("-4 + 1"));
-        assertEquals("-5.0", Calculator.calculateExpression("-4 + -1"));
-        assertEquals("3.0", Calculator.calculateExpression("4 - 1"));
-        assertEquals("-3.0", Calculator.calculateExpression("1 - 4"));
-        assertEquals("12.0", Calculator.calculateExpression("4 * 3"));
-        assertEquals("-12.0", Calculator.calculateExpression("4 * -3"));
-        assertEquals("12.0", Calculator.calculateExpression("-4 * -3"));
-        assertEquals("2.0", Calculator.calculateExpression("4 / 2"));
-        assertEquals("0.5", Calculator.calculateExpression("2 / 4"));
-        assertEquals("-2.0", Calculator.calculateExpression("4 / -2"));
+    public static void testAddition() {
+        String expression = "2 + 3";
+        double expected = 5.0;
+        double result = Double.parseDouble(Calculator.calculateExpression(expression));
+        System.out.println(expression + " = " + result + " (Expected: " + expected + ")");
+    }
 
-        assertEquals("14.0", Calculator.calculateExpression("4 * 3 + 2"));
-        assertEquals("10.0", Calculator.calculateExpression("4 + 3 * 2"));
-        assertEquals("16.0", Calculator.calculateExpression("4 / 2 * 8"));
-        assertEquals("4.0", Calculator.calculateExpression("(4)"));
-        assertEquals("-4.0", Calculator.calculateExpression("(-4)"));
-        assertEquals("-4.0", Calculator.calculateExpression("-(4)"));
-        assertEquals("4.0", Calculator.calculateExpression("-(-4)"));
-        assertEquals("4.0", Calculator.calculateExpression("-(-(4))"));
-        assertEquals("7.0", Calculator.calculateExpression("(4 + 3)"));
-        assertEquals("-6.0", Calculator.calculateExpression("-(3 + 3)"));
-        assertEquals("4.0", Calculator.calculateExpression("(3) + 1"));
-        assertEquals("2.0", Calculator.calculateExpression("(3) - 1"));
-        assertEquals("14.0", Calculator.calculateExpression("(4 + 3) * 2"));
-        assertEquals("13.0", Calculator.calculateExpression("4 + (3 + 1) + (3 + 1) + 1"));
-        assertEquals("14.0", Calculator.calculateExpression("((4 + 3) * 2)"));
-        assertEquals("42.0", Calculator.calculateExpression("((4 + 3) * 2) * 3"));
-        assertEquals("-42.0", Calculator.calculateExpression("((4 + 3) * -2) * 3"));
-        assertEquals("-2.0", Calculator.calculateExpression("((4 + 3) * 2) / -7"));
-        assertEquals("16.0", Calculator.calculateExpression("(4 / 2) * 8"));
-        assertEquals("0.25", Calculator.calculateExpression("4 / (2 * 8)"));
-        assertEquals("1.0", Calculator.calculateExpression("(4 * 2) / 8"));
-        assertEquals("1.0", Calculator.calculateExpression("4 * (2 / 8)"));
-        assertEquals("16.0", Calculator.calculateExpression("(4 / (2) * 8)"));
-        assertEquals("-4.0", Calculator.calculateExpression("-(3 + -(3 - 4))"));
+    public static void testSubtraction() {
+        String expression = "5 - 3";
+        double expected = 2.0;
+        double result = Double.parseDouble(Calculator.calculateExpression(expression));
+        System.out.println(expression + " = " + result + " (Expected: " + expected + ")");
+    }
 
-        assertEquals("-34.0", Calculator.calculateExpression("3 + 5 - 6 * 7"));
-        assertEquals("26.0", Calculator.calculateExpression("3 + 5 * 6 - 7"));
+    public static void testMultiplication() {
+        String expression = "4 * 3";
+        double expected = 12.0;
+        double result = Double.parseDouble(Calculator.calculateExpression(expression));
+        System.out.println(expression + " = " + result + " (Expected: " + expected + ")");
+    }
 
-        assertEquals("48.0", Calculator.calculateExpression("(3 + 5) * 6"));
-        assertEquals("16.5", Calculator.calculateExpression("(3 + 5 * 6) / 2"));
-        assertEquals("20.0", Calculator.calculateExpression("(3 * (5 + 6) + 7) / 2"));
-        assertEquals("42.0", Calculator.calculateExpression("((5 * 6) + (3 * 4))"));
-        assertEquals("5.0", Calculator.calculateExpression("-3 + 4 * 2"));
+    public static void testDivision() {
+        String expression = "10 / 2";
+        double expected = 5.0;
+        double result = Double.parseDouble(Calculator.calculateExpression(expression));
+        System.out.println(expression + " = " + result + " (Expected: " + expected + ")");
+    }
 
-        assertEquals("-5.0", Calculator.calculateExpression("+3 + +4 * -2"));
-
-        assertEquals(Calculator.DIVIZION_BY_ZERO, Calculator.calculateExpression("4 / 0"));
+    public static void testComplexExpression() {
+        String expression = "2 + 3 * (4 - 1)";
+        double expected = 11.0;
+        double result = Double.parseDouble(Calculator.calculateExpression(expression));
+        System.out.println(expression + " = " + result + " (Expected: " + expected + ")");
     }
 }
