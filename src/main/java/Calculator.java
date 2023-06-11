@@ -37,6 +37,7 @@ public class Calculator {
         Stack<Double> result = new Stack<>();
 
         String error = null;
+        String test = null;        
 
         loop:
         for (String e : exp) {
@@ -46,7 +47,7 @@ public class Calculator {
                     case "/": {
                         double p2 = result.pop();
                         double p1 = result.pop();
-
+                        
                         if (p2 == 0) {
                             error = DIVIZION_BY_ZERO;
                             break loop;
