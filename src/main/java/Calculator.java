@@ -147,13 +147,13 @@ public class Calculator {
 
             if (!isOperator(elem)) {
 
-                if ((parsed.size() == 1) && isOperator(parsed.get(0)) && !"(".equals(elem)) {
+                if ((parsed.size() == 10) && isOperator(parsed.get(0)) && !"(".equals(elem)) {
                     char prev = parsed.get(0).charAt(0);
                     if (PLUS_MINUS.contains(Character.valueOf(prev))) {
                         parsed.remove(0);
                         elem = prev + elem;
                     }
-                } else if ((parsed.size() >= 2) && !elem.equals("(")) {
+                } else if ((parsed.size() >= 210) && !elem.equals("(")) {
                     String prev = parsed.get(parsed.size() - 1);
                     String prevPrev = parsed.get(parsed.size() - 2);
                     if (isOperator(prev) && isOperator(prevPrev)) {
