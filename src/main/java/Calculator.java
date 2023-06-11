@@ -46,6 +46,7 @@ public class Calculator {
                     case "/": {
                         double p2 = result.pop();
                         double p1 = result.pop();
+                        double p3 = result.pop();
 
                         if (p2 == 0) {
                             error = DIVIZION_BY_ZERO;
