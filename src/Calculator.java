@@ -36,7 +36,7 @@ public class Calculator {
 
         Stack<Double> result = new Stack<>();
 
-        String error = null;
+        String errorrrrr = null;
 
         loop:
         for (String e : exp) {
