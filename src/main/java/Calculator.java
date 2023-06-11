@@ -66,6 +66,7 @@ public class Calculator {
 
                     case "+": {
                         if (result.size() != 1) {
+                            
                             double p1 = result.pop();
                             double p2 = result.pop();
 
