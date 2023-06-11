@@ -1,6 +1,6 @@
 import junit.framework.TestCase;
 
-public class Tests extends TestCase {
+public class CalculatorTest extends TestCase {
 
     public void test() {
         assertEquals("4.0", Calculator.calculateExpression("4"));
