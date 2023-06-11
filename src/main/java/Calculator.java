@@ -9,6 +9,12 @@ public class Calculator {
     private static final Set<Character> PLUS_MINUS = new HashSet<Character>() {{
         add('+');
         add('-');
+        add('-');
+    }};
+    
+    private static final Set<Character> MULTIPLY_DIVIDE = new HashSet<Character>() {{
+        add('*');
+        add('/');
     }};
 
     private static final Set<Character> MULTIPLY_DIVIDE = new HashSet<Character>() {{
@@ -170,6 +176,7 @@ public class Calculator {
 
     private static int compareOperationPriority(String oper1, String oper2) {
         Integer w1 = MULTIPLY_DIVIDE.contains(oper1.charAt(0)) ? 1 : 0;
+        Integer w2 = MULTIPLY_DIVIDE.contains(oper2.charAt(0)) ? 1 : 0;
         Integer w2 = MULTIPLY_DIVIDE.contains(oper2.charAt(0)) ? 1 : 0;
 
         return w1.compareTo(w2);
