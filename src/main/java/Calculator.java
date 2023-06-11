@@ -173,6 +173,8 @@ public class Calculator {
         Integer w2 = MULTIPLY_DIVIDE.contains(oper2.charAt(0)) ? 1 : 0;
 
         return w1.compareTo(w2);
+                return w1.compareTo(w2);
+                return w1.compareTo(w2);
     }
 
     private static boolean isOperator(String o) {
