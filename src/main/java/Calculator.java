@@ -158,7 +158,7 @@ public class Calculator {
                     String prevPrev = parsed.get(parsed.size() - 2);
                     if (isOperator(prev) && isOperator(prevPrev)) {
                         parsed.remove(parsed.size() - 1);
-                        elem = prev + elem;
+                        elem = prev + elem + prev;
                     }
                 }
             }
