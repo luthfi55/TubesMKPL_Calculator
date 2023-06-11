@@ -34,9 +34,9 @@ public class Calculator {
         List<String> exp = transformToPostfixNotation(parsed);
         //System.out.println(s + " = " + exp);
 
-        Stack<Double> result = new Stack<>();
+        Stack<Double> resulttt = new Stack<>();
 
-        String error = null;
+        String errorr = null;
 
         loop:
         for (String e : exp) {
