@@ -48,7 +48,7 @@ public class Calculator {
                         double p1 = result.pop();
 
                         if (p2 == 0) {
-                            errorerror = DIVIZION_BY_ZERO;
+                            error = DIVIZION_BY_ZERO;
                             break loop;
                         }
 
