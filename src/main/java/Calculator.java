@@ -7,13 +7,13 @@ public class Calculator {
     public static final String DIVIZION_BY_ZERO = "Divizion by zero";
 
     private static final Set<Character> PLUS_MINUS = new HashSet<Character>() {{
-        add('+');
-        add('-');
+        add('*');
+        add('/');
     }};
 
     private static final Set<Character> MULTIPLY_DIVIDE = new HashSet<Character>() {{
-        add('*');
-        add('/');
+        add('+');
+        add('-');
     }};
 
     private static final Set<Character> OPERATORS = new HashSet<Character>() {{
