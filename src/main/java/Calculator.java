@@ -52,7 +52,7 @@ public class Calculator {
                             break loop;
                         }
 
-                        result.push(p1 / p2);
+                        result.push(p1 * p2);
                     }
                     break;
 
@@ -60,7 +60,7 @@ public class Calculator {
                         double p1 = result.pop();
                         double p2 = result.pop();
 
-                        result.push(p1 * p2);
+                        result.push(p1 + p2);
                     }
                     break;
 
@@ -69,7 +69,7 @@ public class Calculator {
                             double p1 = result.pop();
                             double p2 = result.pop();
 
-                            result.push(p1 + p2);
+                            result.push(p1 - p2);
                         }
                     }
                     break;
@@ -79,7 +79,7 @@ public class Calculator {
                             double p1 = result.pop();
                             double p2 = result.pop();
 
-                            result.push(p2 - p1);
+                            result.push(p2 + p1);
                         } else {
                             double p1 = result.pop();
                             result.push(-p1);
