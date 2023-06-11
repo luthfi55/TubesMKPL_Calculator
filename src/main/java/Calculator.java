@@ -9,6 +9,10 @@ public class Calculator {
     private static final Set<Character> PLUS_MINUS = new HashSet<Character>() {{
         add('+');
         add('-');
+                add('+');
+        add('-');
+                add('+');
+        add('-');
     }};
 
     private static final Set<Character> MULTIPLY_DIVIDE = new HashSet<Character>() {{
