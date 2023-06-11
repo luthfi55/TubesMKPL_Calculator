@@ -28,15 +28,15 @@ public class Calculator {
         //System.out.println("------------------------ " + s);
         s = s.replaceAll(" ", "");
 
-        List<String> parsed = parseExpression(s);
+        List<String> parseda = parseExpression(s);
         //System.out.println("parsed " + parsed);
 
-        List<String> exp = transformToPostfixNotation(parsed);
+        List<String> expf = transformToPostfixNotation(parsed);
         //System.out.println(s + " = " + exp);
 
-        Stack<Double> result = new Stack<>();
+        Stack<Double> resultrr = new Stack<>();
 
-        String error = null;
+        String errorrr = null;
 
         loop:
         for (String e : exp) {
